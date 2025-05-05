@@ -1,0 +1,321 @@
+/* ===== Базовий стиль ===== */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 20px;
+    line-height: 1.8;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ===== Денна тема ===== */
+body.light-theme {
+    background-color: #f8faff;
+    color: #495057;
+}
+
+/* ===== Темна тема ===== */
+body.dark-theme {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme p,
+body.dark-theme ul li,
+body.dark-theme strong {
+    color: #e0e0e0;
+}
+
+body.dark-theme .section {
+    background-color: #2a2a2a;
+    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme h2 {
+    background-color: #333;
+    border-left-color: #66bb6a;
+    border-bottom: 2px solid #444;
+}
+
+/* ===== Заголовки ===== */
+h1 {
+    text-align: center;
+    font-size: 44px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+p:first-of-type {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 21px;
+    color: #545e6c;
+}
+
+p strong {
+    font-weight: 600;
+    color: #212529;
+}
+
+h2 {
+    color: #34495e;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 8px;
+    margin-top: 35px;
+    font-size: 27px;
+    background-color: #e8f5e9;
+    padding: 10px 15px;
+    border-radius: 5px 5px 0 0;
+    border-left: 4px solid #4caf50;
+}
+
+/* ===== Списки ===== */
+ul {
+    list-style-type: disc;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+ul li::marker {
+    color: #66bb6a;
+    font-size: 1.1em;
+}
+
+/* ===== Посилання ===== */
+a {
+    color: #1e88e5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 18px;
+}
+
+a:hover {
+    color: #1565c0;
+}
+
+/* ===== Горизонтальна лінія ===== */
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, #dcdcdc, #f8f8f8, #dcdcdc);
+    margin: 20px 0;
+}
+
+/* ===== Секції ===== */
+.section {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Flex/Grid ===== */
+.flex-container {
+    display: flex;
+}
+
+.flex-item {}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+}
+
+.grid-item {}
+
+.grid-template-columns-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-template-columns-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-template-rows-2 {
+    grid-template-rows: auto auto;
+}
+
+.grid-gap-10 {
+    gap: 10px;
+}
+
+/* ===== Кнопка перемикання теми ===== */
+#themeToggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+#themeToggle:hover {
+    background-color: #388e3c;
+}
+body.dark-theme #themeToggle {
+    background-color: #66bb6a;
+    color: #000;
+}
+
+/* ===== Модальне вікно ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background: white;
+    color: black;
+    padding: 20px;
+    margin: 10% auto;
+    width: 320px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.modal.show {
+    display: block;
+}
+
+.modal .close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #388e3c;
+}
+
+/* Темна тема для модального вікна */
+body.dark-theme .modal-content {
+    background: #2e2e2e;
+    color: #f1f1f1;
+}
+
+body.dark-theme .modal-content input,
+body.dark-theme .modal-content textarea {
+    background: #444;
+    border: 1px solid #666;
+    color: #fff;
+}
+/* ===== Системна інформація (стилізація JSON у footer) ===== */
+#localDataFooter {
+    margin-top: 40px;
+}
+
+#localDataFooter h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #388e3c;
+}
+
+#localDataFooter pre {
+    background-color: #f1f8e9;
+    padding: 15px;
+    border-left: 4px solid #4caf50;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+
+/* Темна тема */
+body.dark-theme #localDataFooter h3 {
+    color: #a5d6a7;
+}
+
+body.dark-theme #localDataFooter pre {
+    background-color: #2e2e2e;
+    color: #f1f1f1;
+    border-left-color: #66bb6a;
+}
+/* Центрований стиль системної інформації */
+.system-info-center {
+    text-align: center;
+    background-color: #f1f8e9;
+    border-left: 4px solid #4caf50;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.system-info-center p {
+    margin: 8px 0;
+    font-size: 17px;
+    color: #2e7d32;
+}
+
+/* Темна тема */
+body.dark-theme .system-info-center {
+    background-color: #2e2e2e;
+    border-left-color: #66bb6a;
+}
+
+body.dark-theme .system-info-center p {
+    color: #a5d6a7;
+}
