@@ -1,4 +1,4 @@
-/* ===== Базовий стиль ===== */
+
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 20px;
@@ -9,13 +9,12 @@ body {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* ===== Денна тема ===== */
 body.light-theme {
     background-color: #f8faff;
     color: #495057;
 }
 
-/* ===== Темна тема ===== */
+
 body.dark-theme {
     background-color: #1e1e1e;
     color: #f1f1f1;
@@ -40,7 +39,7 @@ body.dark-theme h2 {
     border-bottom: 2px solid #444;
 }
 
-/* ===== Заголовки ===== */
+
 h1 {
     text-align: center;
     font-size: 44px;
@@ -72,7 +71,6 @@ h2 {
     border-left: 4px solid #4caf50;
 }
 
-/* ===== Списки ===== */
 ul {
     list-style-type: disc;
     margin-left: 30px;
@@ -89,7 +87,7 @@ ul li::marker {
     font-size: 1.1em;
 }
 
-/* ===== Посилання ===== */
+
 a {
     color: #1e88e5;
     text-decoration: none;
@@ -101,7 +99,6 @@ a:hover {
     color: #1565c0;
 }
 
-/* ===== Горизонтальна лінія ===== */
 hr {
     border: 0;
     height: 1px;
@@ -109,7 +106,6 @@ hr {
     margin: 20px 0;
 }
 
-/* ===== Секції ===== */
 .section {
     background-color: white;
     padding: 15px;
@@ -118,7 +114,6 @@ hr {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-/* ===== Flex/Grid ===== */
 .flex-container {
     display: flex;
 }
@@ -167,7 +162,6 @@ hr {
     gap: 10px;
 }
 
-/* ===== Кнопка перемикання теми ===== */
 #themeToggle {
     position: fixed;
     top: 10px;
@@ -190,7 +184,7 @@ body.dark-theme #themeToggle {
     color: #000;
 }
 
-/* ===== Модальне вікно ===== */
+
 .modal {
     display: none;
     position: fixed;
@@ -248,7 +242,7 @@ body.dark-theme #themeToggle {
     background-color: #388e3c;
 }
 
-/* Темна тема для модального вікна */
+
 body.dark-theme .modal-content {
     background: #2e2e2e;
     color: #f1f1f1;
@@ -260,7 +254,7 @@ body.dark-theme .modal-content textarea {
     border: 1px solid #666;
     color: #fff;
 }
-/* ===== Системна інформація (стилізація JSON у footer) ===== */
+
 #localDataFooter {
     margin-top: 40px;
 }
@@ -293,7 +287,7 @@ body.dark-theme #localDataFooter pre {
     color: #f1f1f1;
     border-left-color: #66bb6a;
 }
-/* Центрований стиль системної інформації */
+
 .system-info-center {
     text-align: center;
     background-color: #f1f8e9;
@@ -310,7 +304,6 @@ body.dark-theme #localDataFooter pre {
     color: #2e7d32;
 }
 
-/* Темна тема */
 body.dark-theme .system-info-center {
     background-color: #2e2e2e;
     border-left-color: #66bb6a;
